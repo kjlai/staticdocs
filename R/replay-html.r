@@ -15,7 +15,7 @@ replay_html.list <- function(x, ...) {
   parts <- lapply(parts, function(x) {
     if (length(x) == 1) return(x[[1]])
     src <- str_c(vapply(x, "[[", "src", FUN.VALUE = character(1)), 
-      collapse = "")
+      collapse = "\n")
     structure(list(src = src), class = "source")
   })
   
